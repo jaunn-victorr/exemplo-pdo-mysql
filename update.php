@@ -2,7 +2,7 @@
 
     require_once './vendor/autoload.php';
 
-    use AULA_PHP\MySQLConnection;
+    use ExemploPDOMysql\MySQLConnection;
     $bd = new MySQLConnection();
 
     if($_SERVER['REQUEST_METHOD'] == 'GET') {

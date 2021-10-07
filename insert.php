@@ -1,7 +1,7 @@
 <?php
 require_once './vendor/autoload.php';
 
-use ExemploPDoMysql\MySQLConnection; //PDO;
+use ExemploPDOMysql\MySQLConnection; //PDO;
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $bd = new MySQLConnection; //new PDO('mysql:host=localhost;dbname=biblioteca', 'root', '');
     $comando = $bd->prepare('INSERT INTO generos(nome) values (:nome)');
