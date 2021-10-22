@@ -9,19 +9,10 @@ $comando = $bd->prepare('select * from generos');
 $comando-> execute();
 $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
 
-
+$_tiltle= 'Gêneros';
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <title>BIBLIOTECA</title>
-</head>
-<body>
-    
-        <main class="container">
+<?php include('./includes/reader.php');?>
             <a class="btn btn-primary" href="insert.php">Novo gênero</a>
             
                     <table class="table table-borderless">
@@ -39,8 +30,6 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
                             </tr>
                             <?php endforeach ?>
                         </table>
-         </main>
-      
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-</body>
-</html>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+                        
+<?php include('./includes/footer.php');?>
